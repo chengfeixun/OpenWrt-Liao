@@ -33,16 +33,16 @@ function drop_package(){
 rm -rf package/custom; mkdir package/custom
 
 # Add a feed source
+git clone https://github.com/jerrykuku/lua-maxminddb.git package/lua-maxminddb
+git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git  package/luci-theme-argon-18.06
+# git clone https://github.com/kenzok78/luci-app-fileassistant.git package/luci-app-fileassistant
 # sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
 # sed -i '$a src-git jerryk https://github.com/jerrykuku/openwrt-package' feeds.conf.default
-git clone https://github.com/jerrykuku/lua-maxminddb.git package/lua-maxminddb
-git clone https://github.com/rrkai/luci-app-vssr.git package/luci-app-vssr
-git clone --depth=1 https://github.com/fw876/helloworld.git package/helloworld
-git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git  package/luci-theme-argon-18.06
-git clone https://github.com/kenzok78/luci-app-fileassistant.git package/luci-app-fileassistant
-git clone https://github.com/zzsj0928/luci-app-pushbot package/luci-app-pushbot
-git clone https://github.com/rrkai/luci-app-eqosplus package/luci-app-eqosplus
-git clone https://github.com/vernesong/OpenClash.git package/luci-app-openclash
+# git clone https://github.com/zzsj0928/luci-app-pushbot package/luci-app-pushbot
+# git clone https://github.com/rrkai/luci-app-eqosplus package/luci-app-eqosplus
+# git clone https://github.com/vernesong/OpenClash.git package/luci-app-openclash
+# git clone https://github.com/rrkai/luci-app-vssr.git package/luci-app-vssr
+# git clone --depth=1 https://github.com/fw876/helloworld.git package/helloworld
 # sed -i '$a src-git bypass https://github.com/garypang13/openwrt-bypass' feeds.conf.default
 # mv -vf ../mt7621_phicomm_k2p.dts ./target/linux/ramips/dts/mt7621_phicomm_k2p.dts
 # svn co https://github.com/messense/aliyundrive-webdav/trunk/openwrt package/aliyundrive-webdav
